@@ -35,7 +35,8 @@ public class mainControl {
         fillBooks();
         fillFilms();
         fillProducts();
-        MainMenu show = new MainMenu(films,books,games,products);
+        MainMenu show = new MainMenu();
+        show.setDisplay(films,games,books,products);
     }
     public void fillGames()
     {

@@ -8,19 +8,16 @@ import Products.Game;
 import Products.Product;
 import java.util.ArrayList;
 
-
 public class BrowseProducts {
     DBReader db;
     ArrayList<Film> films;
     ArrayList<eBook> books;
     ArrayList<Game> games ;
     ArrayList<Product> products;
-    public BrowseProducts(ArrayList<Film> films, ArrayList<eBook> books, ArrayList<Game> games, ArrayList<Product> products)
+    String search;
+    
+    public BrowseProducts()
     {
-        this.films = films;
-        this.books = books;
-        this.games = games;
-        this.products = products;
     }
     
     public String getFilmsList()
@@ -32,6 +29,7 @@ public class BrowseProducts {
         }
         return result;
     }
+    
     public String getBooksList()
     {
        
@@ -42,6 +40,7 @@ public class BrowseProducts {
         }
         return result;
     }
+    
     public String getGamesList()
     {
         
@@ -51,5 +50,26 @@ public class BrowseProducts {
             result += games.get(i).toString() + "\n";
         }
         return result;
+    }
+    
+    public ArrayList<Product> searchForProduct()
+    {
+        products.clear();
+        
+        searchList(games);
+        searchList(films);
+        searchList(books);
+        
+        return products; 
+    }
+    
+    public void searchList(ArrayList<? extends Product> tempList)
+    {
+        for (int i = 0; i < tempList.size(); i++)
+        {
+            String tempTitle = tempList.get(i).getTitle();
+            if (tempTitle.equalsIgnoreCase(search))
+                products.add(tempList.get(i));
+        }
     }
 }

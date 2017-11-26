@@ -1,22 +1,15 @@
 package DatabaseSim;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-
 public class DBWriter extends DBManipulator {
     
-    public DBWriter()
+    DBWriter()
     {
         
     }
     
-    public void writeToFile(String fileName,String info) throws Exception
+    void writeToFile(String filename)
     {
-        //linkFile(filename);
-        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
-        writer.write(info + "\n");
-
-        writer.close();
+        linkFile(filename);
+        
     }
-    
 }

@@ -5,17 +5,10 @@
  */
 package Users;
 
-public abstract class User {
+/**
+ *
+ * @author Trevor
+ */
+public class User {
     
-        String forname;
-        String surname;
-        String username;
-        String password;
-        String subscriptionType;
-        String dateOfBirth;
-        double balance;
-        String type;
-        
-        abstract String getDetails(); //abstract method
-        abstract String getType();
 }
