@@ -37,6 +37,8 @@ public class mainControl {
         fillProducts();
         MainMenu show = new MainMenu();
         show.setDisplay(films,games,books,products);
+        show.setVisible(true);
+        System.out.println(films.size() + " " + games.size() + " " + books.size());
     }
     public void fillGames()
     {
