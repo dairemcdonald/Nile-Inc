@@ -15,9 +15,9 @@ public class Game extends Product{
     public String developer;
     public String platform;
     
-    public Game(String id, double price, String description, String title, String genre , int ageRestriction, String developer, String platform)
+    public Game(double price, String description, String title, String genre , int ageRestriction, String developer, String platform)
     {
-        super(id,price, description, title, genre);
+        super(price, description, title, genre);
         this.ageRestriction = ageRestriction;
         this.developer = developer;
         this.platform = platform;

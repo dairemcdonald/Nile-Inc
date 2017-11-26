@@ -17,9 +17,9 @@ public class Film extends Product{
     public String actors = "";
     
     
-    public Film(String id, double price, String description, String title, String genre , String runTime, String language, String director, String actors)
+    public Film(double price, String description, String title, String genre , String runTime, String language, String director, String actors)
     {
-        super(id,price, description, title, genre);
+        super(price, description, title, genre);
         this.runTime = runTime;
         this.language = language;
         this.director = director;
@@ -27,7 +27,6 @@ public class Film extends Product{
     }
     
     //getters
-    
     public String getRunTime()
     {
         return runTime;

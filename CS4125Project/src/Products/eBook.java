@@ -16,9 +16,9 @@ public class eBook extends Product{
     private String language;
     private String publisher;
     
-    public eBook(String id,double price, String description, String title, String genre , int pages, String author, String language, String publisher)
+    public eBook(double price, String description, String title, String genre , int pages, String author, String language, String publisher)
     {
-        super(id,price, description, title, genre);
+        super(price, description, title, genre);
         this.pages = pages;
         this.author = author;
         this.language = language;

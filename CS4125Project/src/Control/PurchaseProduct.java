@@ -5,17 +5,10 @@
  */
 package Control;
 
-import Inventory.Inventory;
-import Products.Product;
-import java.util.ArrayList;
-
 /**
  *
  * @author User
  */
 public class PurchaseProduct {
-    public PurchaseProduct(Inventory inventory, String productID)
-    {
-        inventory.addProduct(productID);
-    }
+    
 }
