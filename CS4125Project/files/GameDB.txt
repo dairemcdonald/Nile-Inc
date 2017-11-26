@@ -1,2 +1,2 @@
-45.00,Military Sim,Escape From Tarkov,First Person Shooter,18,BattleStateGames,PC
-30.00,The ultimate life and death fight,PlayerUnknowns Battlegrounds,Battle Royale,18,PUBG Corp,PC  
+m1,45.0,Military Sim,Escape From Tarkov,First Person Shooter,18,BattleStateGames,PC
+m2,30.0,The ultimate life and death fight,PlayerUnknowns Battlegrounds,Battle Royale,18,PUBG Corp,PC  

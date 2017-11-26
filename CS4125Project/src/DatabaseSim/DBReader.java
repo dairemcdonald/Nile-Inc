@@ -66,4 +66,16 @@ public class DBReader extends DBManipulator {
            }
         return "Error: Username or password is incorrect";
     }
+    public String getInventory()
+    {
+         linkFile("files/InventoryDB.txt");
+        String line;
+        String result = "";
+        while (in.hasNextLine()) {
+                line = in.nextLine();
+                result += line + ";";
+                
+            }
+        return result;
+    }
 }
