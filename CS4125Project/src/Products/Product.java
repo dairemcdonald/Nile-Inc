@@ -11,20 +11,28 @@ package Products;
  */
 public class Product {
     
+    public String id;
     public double price;
     public String description;
     public String title;
     public String genre;
    
-    Product(double price, String description, String title, String genre)
+    Product(String id, double price, String description, String title, String genre)
     {
+        this.id = id;
         this.price = price;
         this.description = description;
         this.title = title;
         this.genre = genre;
     }
     
+   
+    
     //getters
+    public String getID()
+    {
+        return id;
+    }
     public double getPrice()
     {
         return price;
