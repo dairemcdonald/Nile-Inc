@@ -54,9 +54,9 @@ public class Product {
     }
      
      //setters 
-     public void setPrice(String newName)
+     public void setPrice(double price)
      {
-         this.title = newName;
+         this.price = price;
      }
      
      public void setDescription(String newDescription)

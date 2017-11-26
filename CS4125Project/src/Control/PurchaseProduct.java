@@ -14,8 +14,15 @@ import java.util.ArrayList;
  * @author User
  */
 public class PurchaseProduct {
-    public PurchaseProduct(Inventory inventory, String productID)
+    public PurchaseProduct()
     {
-        inventory.addProduct(productID);
+        
+    }
+    
+    public Inventory buyProduct(Inventory inventory, String productID, double price, double balance)
+    {
+        if(balance >= price)
+            inventory.addProduct(productID);
+        return inventory;
     }
 }
