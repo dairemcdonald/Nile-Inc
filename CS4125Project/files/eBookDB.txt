@@ -1,2 +1,2 @@
-e1,10.0,A magical book,Harry Potter,Science Fiction,300,JK Rowling,English,Penguin
-e2,20.0,1996 romatic novel,The Notebook,Romantic Novel,214,Nicholas Sparks,English,Warner Books
+10.00,A magical book,Harry Potter,Science Fiction,300,JK Rowling,English,Penguin
+20.00,1996 romatic novel,The Notebook,Romantic Novel,214,Nicholas Sparks,English,Warner Books
