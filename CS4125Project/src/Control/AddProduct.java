@@ -30,16 +30,6 @@ public class AddProduct
             Film film = new Film(temp[0],Double.parseDouble(temp[1]),temp[2],temp[3],temp[4],temp[5],temp[6],temp[7],temp[8]);
             products.add(film);
         }
-        if(type.equalsIgnoreCase("game"))
-        {
-            Game game = new Game(Double.parseDouble(temp[0]),temp[1],temp[2],temp[3],Integer.parseInt(temp[4]),temp[5],temp[6]);
-            products.add(game);
-        }
-        if(type.equalsIgnoreCase("ebook"))
-        {
-            eBook book = new eBook(Double.parseDouble(temp[0]),temp[1],temp[2],temp[3],Integer.parseInt(temp[4]),temp[5],temp[6],temp[7]);
-            products.add(book);
-        }
         else if(type.equalsIgnoreCase("eBook"))
         {
             String temp[] = details.split(",");

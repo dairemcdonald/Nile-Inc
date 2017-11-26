@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class DBWriter extends DBManipulator {
     
-    DBWriter()
+    public DBWriter()
     {
         
     }

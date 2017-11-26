@@ -9,7 +9,7 @@ package Users;
  *
  * @author Trevor
  */
-public class User {
+public abstract class User {
     
         String forname;
         String surname;
