@@ -1,25 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Inventory;
 
 import DatabaseSim.DBReader;
 import Products.Product;
 import java.util.ArrayList;
 
-/**
- *
- * @author User
- */
 public class Inventory {
     public ArrayList<Product> myInventory = new ArrayList();
     public ArrayList<Product> products;
     public String userID;
     public Inventory()
     {
-        
+    
     }
     public void fillInventory(ArrayList<Product> products,String userID)
     {
@@ -66,5 +58,4 @@ public class Inventory {
         return myInventory;
     }
     
-   
 }

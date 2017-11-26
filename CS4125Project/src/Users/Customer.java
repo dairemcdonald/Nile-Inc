@@ -16,7 +16,7 @@ public class Customer extends User {
         this.surname = surname;
         this.username = username;
         this.password = password;
-        this.subscriptionType = subscriptionType;
+        this.currentSubscription = new Subscription(subscriptionType);
         this.dateOfBirth = dateOfBirth;
         this.balance = 0;
         this.type = "Customer";
@@ -25,7 +25,7 @@ public class Customer extends User {
     public String getDetails()
     {
         String result = "";
-        result +=  forname + "," + surname + "," + username + "," +  password + "," + subscriptionType + "," + balance + "," + dateOfBirth + "," + type;
+        result +=  forname + "," + surname + "," + username + "," +  password + "," + currentSubscription.getType() + "," + balance + "," + dateOfBirth + "," + type;
         return result;
     }
     

@@ -12,6 +12,7 @@ public abstract class User {
         String username;
         String password;
         String subscriptionType;
+        Subscription currentSubscription;
         String dateOfBirth;
         double balance;
         String type;

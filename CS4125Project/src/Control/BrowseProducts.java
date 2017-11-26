@@ -22,7 +22,6 @@ public class BrowseProducts {
         this.games = games;
         this.products = products;
     }
-    
     public String getFilmsList()
     {
         String result = "";
@@ -31,7 +30,7 @@ public class BrowseProducts {
             result += films.get(i).toString() + "\n";
         }
         return result;
-    }
+    } 
     public String getBooksList()
     {
        
@@ -44,7 +43,6 @@ public class BrowseProducts {
     }
     public String getGamesList()
     {
-        
         String result = "";
         for(int i = 0; i < games.size(); i++)
         {
