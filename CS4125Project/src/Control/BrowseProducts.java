@@ -8,46 +8,54 @@ import Products.Game;
 import Products.Product;
 import java.util.ArrayList;
 
-
 public class BrowseProducts {
-    DBReader db;
-    ArrayList<Film> films;
-    ArrayList<eBook> books;
-    ArrayList<Game> games ;
-    ArrayList<Product> products;
-    public BrowseProducts(ArrayList<Film> films, ArrayList<eBook> books, ArrayList<Game> games, ArrayList<Product> products)
+    private DBReader db;
+    private ArrayList<Film> films;
+    private ArrayList<eBook> books;
+    private ArrayList<Game> games ;
+    private ArrayList<Product> products;
+    private String search = "";
+    private String type = "";
+    private String sort = "";
+    
+    public BrowseProducts(){}
+    
+    public ArrayList<Product> updateList(String type, String sort, String search)
     {
-        this.films = films;
-        this.books = books;
-        this.games = games;
-        this.products = products;
+        products = new ArrayList<Product>();
+        films = new ArrayList<Film>();
+        games = new ArrayList<Game>();
+        books = new ArrayList<eBook>();
+        this.search = search;
+        this.type = type;
+        this.sort = sort;
+        searchForProduct();
+        sortList();
+        return products;
     }
-    public String getFilmsList()
+    
+    public void searchForProduct()
     {
-        String result = "";
-        for(int i = 0; i < films.size(); i++)
-        {
-            result += films.get(i).toString() + "\n";
-        }
-        return result;
-    } 
-    public String getBooksList()
-    {
-       
-        String result = "";
-        for(int i = 0; i < books.size(); i++)
-        {
-            result += books.get(i).toString() + "\n";
-        }
-        return result;
+        //products.clear();
+        if(type.equalsIgnoreCase("Game") || type.equalsIgnoreCase("All"))
+            searchList(games);
+        if(type.equalsIgnoreCase("Movie") || type.equalsIgnoreCase("All"))
+            searchList(films);
+        if(type.equalsIgnoreCase("eBook") || type.equalsIgnoreCase("All"))
+            searchList(books); 
     }
-    public String getGamesList()
+    
+    public void searchList(ArrayList<? extends Product> tempList)
     {
-        String result = "";
-        for(int i = 0; i < games.size(); i++)
+        for (int i = 0; i < tempList.size(); i++)
         {
-            result += games.get(i).toString() + "\n";
+            String tempTitle = tempList.get(i).getTitle();
+            if (tempTitle.equalsIgnoreCase(search) || search.equalsIgnoreCase(""))
+                products.add(tempList.get(i));
         }
-        return result;
+    }
+    public void sortList()
+    {
+        //sort code
     }
 }
