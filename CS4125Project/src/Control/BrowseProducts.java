@@ -14,14 +14,18 @@ public class BrowseProducts {
     private ArrayList<eBook> books;
     private ArrayList<Game> games ;
     private ArrayList<Product> products;
-    private String search;
-    private String type;
-    private String sort;
+    private String search = "";
+    private String type = "";
+    private String sort = "";
     
     public BrowseProducts(){}
     
     public ArrayList<Product> updateList(String type, String sort, String search)
     {
+        products = new ArrayList<Product>();
+        films = new ArrayList<Film>();
+        games = new ArrayList<Game>();
+        books = new ArrayList<eBook>();
         this.search = search;
         this.type = type;
         this.sort = sort;
@@ -32,12 +36,12 @@ public class BrowseProducts {
     
     public void searchForProduct()
     {
-        products.clear();
-        if(!type.equalsIgnoreCase("Film") && !type.equalsIgnoreCase("Book"))
+        //products.clear();
+        if(type.equalsIgnoreCase("Game") || type.equalsIgnoreCase("All"))
             searchList(games);
-        if(!type.equalsIgnoreCase("Game") && !type.equalsIgnoreCase("Book"))
+        if(type.equalsIgnoreCase("Movie") || type.equalsIgnoreCase("All"))
             searchList(films);
-        if(!type.equalsIgnoreCase("Film") && !type.equalsIgnoreCase("Game"))
+        if(type.equalsIgnoreCase("eBook") || type.equalsIgnoreCase("All"))
             searchList(books); 
     }
     
