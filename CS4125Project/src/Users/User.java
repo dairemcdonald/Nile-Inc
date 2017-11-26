@@ -11,4 +11,16 @@ package Users;
  */
 public class User {
     
+        String forname;
+        String surname;
+        String username;
+        String password;
+        String subscriptionType;
+        Subscription currentSubscription;
+        String dateOfBirth;
+        double balance;
+        String type;
+        
+        abstract String getDetails(); //abstract method
+        abstract String getType();
 }

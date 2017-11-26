@@ -5,10 +5,24 @@
  */
 package Control;
 
+import Inventory.Inventory;
+import Products.Product;
+import java.util.ArrayList;
+
 /**
  *
  * @author User
  */
 public class PurchaseProduct {
+    public PurchaseProduct()
+    {
+        
+    }
     
+    public Inventory buyProduct(Inventory inventory, String productID, double price, double balance)
+    {
+        if(balance >= price)
+            inventory.addProduct(productID);
+        return inventory;
+    }
 }

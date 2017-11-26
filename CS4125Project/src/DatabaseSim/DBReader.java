@@ -52,4 +52,30 @@ public class DBReader extends DBManipulator {
         return result;
     }
     
+    public String getPassword(String username)
+    {
+        linkFile("files/UserDB.txt");
+        String line;
+        while (in.hasNextLine()) {
+               line = in.nextLine();
+               String split[] = line.split(",");
+               if(split[2].equalsIgnoreCase(username))
+               {
+                   return split[3];
+               }
+           }
+        return "Error: Username or password is incorrect";
+    }
+    public String getInventory()
+    {
+         linkFile("files/InventoryDB.txt");
+        String line;
+        String result = "";
+        while (in.hasNextLine()) {
+                line = in.nextLine();
+                result += line + ";";
+                
+            }
+        return result;
+    }
 }
