@@ -5,6 +5,10 @@
  */
 package Users;
 
+/**
+ *
+ * @author Trevor
+ */
 public abstract class User {
     
         String forname;

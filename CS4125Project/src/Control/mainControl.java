@@ -55,9 +55,12 @@ public class mainControl implements Runnable{
         fillBooks();
         fillFilms();
         fillProducts();
+        MainMenu show = new MainMenu();
+        show.setDisplay(films,games,books,products);
+        show.setVisible(true);
+        System.out.println(films.size() + " " + games.size() + " " + books.size());
         inventory.fillInventory(products,userID);
         
-        MainMenu show = new MainMenu(films,books,games,products);
     }
     
     public void fillGames()

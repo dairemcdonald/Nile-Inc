@@ -7,8 +7,8 @@ package Users;
 
 /**
  *
- * @author User
- */
+ * @author Trevor
+ */    
 public class Customer extends User {
       public Customer(String forname, String surname, String username, String password, String subscriptionType, String dateOfBirth)
     {

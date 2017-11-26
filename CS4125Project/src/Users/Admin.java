@@ -5,28 +5,10 @@
  */
 package Users;
 
-public class Admin extends User{
-    public Admin(String forname, String surname, String username, String password, String subscriptionType, String dateOfBirth)
-    {
-        this.forname = forname;
-        this.surname = surname;
-        this.username = username;
-        this.password = password;
-        this.subscriptionType = subscriptionType;
-        this.dateOfBirth = dateOfBirth;
-        this.balance = 0;
-        this.type = "Admin";
-    }
+/**
+ *
+ * @author Trevor
+ */
+public class Admin {
     
-    public String getDetails()
-    {
-        String result = "";
-        result +=  forname + "," + surname + "," + username + "," +  password + "," + subscriptionType + "," + balance + "," + dateOfBirth + "," + type;
-        return result;
-    }
-    
-    public String getType()
-    {
-        return type;
-    }
 }

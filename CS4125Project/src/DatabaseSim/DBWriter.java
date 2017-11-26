@@ -15,13 +15,10 @@ public class DBWriter extends DBManipulator {
         
     }
     
-    public void writeToFile(String fileName,String info) throws Exception
+    void writeToFile(String filename)
     {
-        //linkFile(filename);
-        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
-        writer.write(info + "\n");
-
-        writer.close();
+        linkFile(filename);
+        
     }
     
     public void writeInventory(Inventory inventory)

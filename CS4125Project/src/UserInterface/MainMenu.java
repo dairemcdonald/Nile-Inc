@@ -52,6 +52,9 @@ public class MainMenu extends javax.swing.JFrame {
         viewPanel = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
+        games = new ArrayList<Game>();
+        films = new ArrayList<Film>();
+        books = new ArrayList<eBook>();
         jPanel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -149,6 +152,7 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel1.add(jPanel2, gridBagConstraints);
 
         viewPanel.setBackground(new java.awt.Color(255, 255, 255));
+        viewPanel.setAutoscrolls(true);
 
         javax.swing.GroupLayout viewPanelLayout = new javax.swing.GroupLayout(viewPanel);
         viewPanel.setLayout(viewPanelLayout);
@@ -265,12 +269,15 @@ public class MainMenu extends javax.swing.JFrame {
 
     public void addProducts()
     {
+        browser = new BrowseProducts();
+        browser.updateArrays(films, games, books);
         productList = new ArrayList<javax.swing.JPanel>();
         javax.swing.GroupLayout viewPanelLayout = new javax.swing.GroupLayout(viewPanel);
         parallel = viewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING);
         sequential = viewPanelLayout.createSequentialGroup();
         updateSearch();
         products = browser.updateList(type, sort, search);
+        System.out.println(products.size());
 
         for (int i = 0; i < 20; i++)
         {
@@ -292,7 +299,7 @@ public class MainMenu extends javax.swing.JFrame {
             
 
             nameLabel.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-            nameLabel.setText("<productname>");
+            nameLabel.setText("faggot");
             nameLabel.addMouseListener(new MouseAdapter()
             {
                 @Override
@@ -361,7 +368,11 @@ public class MainMenu extends javax.swing.JFrame {
     
     public void setDisplay(ArrayList<Film> films, ArrayList<Game> games, ArrayList<eBook> books, ArrayList<Product> products)
     {
-        
+        this.films = films;
+        this.books = books;
+        this.games = games;
+        //System.out.println("sizes: " + films.size() + );
+        addProducts();
     }
     
     public void updateSearch()
@@ -429,8 +440,11 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel productPanel;
     private ProductView productView;
     private ArrayList<javax.swing.JPanel> productList;
+    private ArrayList<Game> games;
+    private ArrayList<Film> films;
+    private ArrayList<eBook> books;
     private ArrayList<Product> products;
-    private BrowseProducts browser = new BrowseProducts();
+    private BrowseProducts browser;
     private String sort, type, search;
 
 
