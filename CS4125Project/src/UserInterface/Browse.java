@@ -8,7 +8,7 @@ public class Browse {
     
     public Browse()
     {
-        BrowseProducts bp = new BrowseProducts();
+        /*BrowseProducts bp = new BrowseProducts();
         System.out.println("Please choose an option: \n(1)Browse Products\n(2)Search Products\nPress 'Q' to quit");
         Scanner in = new Scanner(System.in);
         String result = in.nextLine();
@@ -33,6 +33,6 @@ public class Browse {
                 list = bp.getGamesList();
                 System.out.println(list);
             }
-        }
+        }*/
     }
 }

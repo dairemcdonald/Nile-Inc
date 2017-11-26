@@ -5,6 +5,7 @@
  */
 package UserInterface;
 
+import Control.BrowseProducts;
 import Products.Film;
 import Products.Game;
 import Products.Product;
@@ -44,21 +45,28 @@ public class MainMenu extends javax.swing.JFrame {
         viewPanel = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        typeDrop = new javax.swing.JComboBox<>();
+        sortDrop = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextPane1 = new javax.swing.JTextPane();
+        searchBox = new javax.swing.JTextPane();
+        jPanel4 = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1280, 720));
         setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1280, 720));
 
+        jLayeredPane1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLayeredPane1.setPreferredSize(new java.awt.Dimension(1280, 720));
+
+        jPanel1.setPreferredSize(new java.awt.Dimension(400, 740));
         jPanel1.setLayout(new java.awt.GridBagLayout());
 
         jPanel2.setBackground(new java.awt.Color(100, 150, 150));
-        jPanel2.setMinimumSize(new java.awt.Dimension(700, 60));
+        jPanel2.setMinimumSize(new java.awt.Dimension(100, 60));
         jPanel2.setPreferredSize(new java.awt.Dimension(1000, 60));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -75,7 +83,12 @@ public class MainMenu extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        gridBagConstraints.weightx = 0.1;
         jPanel1.add(jPanel2, gridBagConstraints);
+
+        viewPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout viewPanelLayout = new javax.swing.GroupLayout(viewPanel);
         viewPanel.setLayout(viewPanelLayout);
@@ -110,23 +123,23 @@ public class MainMenu extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
         jPanel3.add(jButton1, gridBagConstraints);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Game", "Movie", "eBook" }));
-        jComboBox1.setMinimumSize(new java.awt.Dimension(75, 22));
-        jComboBox1.setPreferredSize(new java.awt.Dimension(75, 22));
+        typeDrop.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Game", "Movie", "eBook" }));
+        typeDrop.setMinimumSize(new java.awt.Dimension(75, 22));
+        typeDrop.setPreferredSize(new java.awt.Dimension(75, 22));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 15);
-        jPanel3.add(jComboBox1, gridBagConstraints);
+        jPanel3.add(typeDrop, gridBagConstraints);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Name (A-Z)", "Name (Z-A)", "Price (Highest)", "Price (Lowest)" }));
-        jComboBox2.setMinimumSize(new java.awt.Dimension(100, 22));
-        jComboBox2.setPreferredSize(new java.awt.Dimension(100, 22));
+        sortDrop.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Name (A-Z)", "Name (Z-A)", "Price (Highest)", "Price (Lowest)" }));
+        sortDrop.setMinimumSize(new java.awt.Dimension(100, 22));
+        sortDrop.setPreferredSize(new java.awt.Dimension(100, 22));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 15);
-        jPanel3.add(jComboBox2, gridBagConstraints);
+        jPanel3.add(sortDrop, gridBagConstraints);
 
         jLabel1.setText("Type");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -144,14 +157,14 @@ public class MainMenu extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 5);
         jPanel3.add(jLabel2, gridBagConstraints);
 
-        jTextPane1.setAutoscrolls(false);
-        jTextPane1.setMinimumSize(new java.awt.Dimension(150, 20));
-        jTextPane1.setName(""); // NOI18N
-        jTextPane1.setPreferredSize(new java.awt.Dimension(150, 20));
+        searchBox.setAutoscrolls(false);
+        searchBox.setMinimumSize(new java.awt.Dimension(150, 20));
+        searchBox.setName(""); // NOI18N
+        searchBox.setPreferredSize(new java.awt.Dimension(150, 20));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 0;
-        jPanel3.add(jTextPane1, gridBagConstraints);
+        jPanel3.add(searchBox, gridBagConstraints);
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -159,33 +172,96 @@ public class MainMenu extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         jPanel1.add(jPanel3, gridBagConstraints);
 
+        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel4.setMinimumSize(new java.awt.Dimension(130, 20));
+        jPanel4.setPreferredSize(new java.awt.Dimension(130, 20));
+
+        jButton2.setBackground(new java.awt.Color(255, 0, 0));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(0, 110, Short.MAX_VALUE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 476, Short.MAX_VALUE))
+        );
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridheight = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+        jPanel1.add(jPanel4, gridBagConstraints);
+
+        jPanel5.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel5.setMaximumSize(new java.awt.Dimension(130, 20));
+        jPanel5.setMinimumSize(new java.awt.Dimension(130, 20));
+        jPanel5.setPreferredSize(new java.awt.Dimension(130, 20));
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridheight = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.VERTICAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_START;
+        jPanel1.add(jPanel5, gridBagConstraints);
+
         jLayeredPane1.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
         jLayeredPane1Layout.setHorizontalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 793, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 896, Short.MAX_VALUE)
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 496, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1)
+            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1)
+            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     public void addProducts()
     {
@@ -193,6 +269,8 @@ public class MainMenu extends javax.swing.JFrame {
         javax.swing.GroupLayout viewPanelLayout = new javax.swing.GroupLayout(viewPanel);
         parallel = viewPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING);
         sequential = viewPanelLayout.createSequentialGroup();
+        updateSearch();
+        products = browser.updateList(type, sort, search);
 
         for (int i = 0; i < 20; i++)
         {
@@ -286,6 +364,12 @@ public class MainMenu extends javax.swing.JFrame {
         
     }
     
+    public void updateSearch()
+    {
+        type = typeDrop.getSelectedItem().toString();
+        sort = sortDrop.getSelectedItem().toString();
+        search = searchBox.getText();
+    }
     
     /**
      * @param args the command line arguments
@@ -324,16 +408,19 @@ public class MainMenu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextPane searchBox;
+    private javax.swing.JComboBox<String> sortDrop;
+    private javax.swing.JComboBox<String> typeDrop;
     private javax.swing.JPanel viewPanel;
     // End of variables declaration//GEN-END:variables
     private javax.swing.GroupLayout.ParallelGroup parallel;
@@ -341,6 +428,9 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel productPanel;
     private ProductView productView;
     private ArrayList<javax.swing.JPanel> productList;
+    private ArrayList<Product> products;
+    private BrowseProducts browser = new BrowseProducts();
+    private String sort, type, search;
 
 
 }
