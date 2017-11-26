@@ -57,7 +57,7 @@ public class mainControl implements Runnable{
         fillProducts();
         inventory.fillInventory(products,userID);
         
-        MainMenu show = new MainMenu(films,books,games,products);
+        MainMenu show = new MainMenu();
     }
     
     public void fillGames()
