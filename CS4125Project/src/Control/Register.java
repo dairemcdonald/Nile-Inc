@@ -23,14 +23,15 @@ public class Register {
         if(accountType.equalsIgnoreCase("Admin"))
         {
             Admin newAdmin = new Admin(forname, surname,username, hash,subscriptionType, dateOfBirth);
-            db.writeToFile("UserDB", newAdmin.getDetails());
+            db.writeToFile("files/UserDB.txt", newAdmin.getDetails());
         }
         else
         {
             Customer newCustomer = new Customer(forname, surname,username, hash,subscriptionType,  dateOfBirth);
-            db.writeToFile("UserDB", newCustomer.getDetails());
+            db.writeToFile("files/UserDB.txt", newCustomer.getDetails());
         }
     }
+    
     public  String Sha256(String pass) throws NoSuchAlgorithmException
     {
 
