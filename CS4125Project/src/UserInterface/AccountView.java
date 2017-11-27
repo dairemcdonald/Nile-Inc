@@ -5,12 +5,6 @@
  */
 package UserInterface;
 
-import Control.BrowseProducts;
-import Products.Film;
-import Products.Game;
-import Products.Product;
-import Products.eBook;
-import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
@@ -63,6 +57,7 @@ public class AccountView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1280, 720));
+        setUndecorated(true);
 
         jLayeredPane1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jLayeredPane1.setPreferredSize(new java.awt.Dimension(1280, 720));
@@ -281,6 +276,7 @@ public class AccountView extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

@@ -13,6 +13,7 @@ import Products.Game;
 import Products.Product;
 import Products.eBook;
 import UserInterface.MainMenu;
+import UserInterface.LoginUI;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -56,7 +57,8 @@ public class mainControl implements Runnable{
         fillFilms();
         fillProducts();
         inventory.fillInventory(products,userID);
-        
+        LoginUI entrance = new LoginUI();
+        entrance.setVisible(true);
         MainMenu show = new MainMenu();
     }
     
