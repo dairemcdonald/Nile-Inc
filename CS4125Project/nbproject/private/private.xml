@@ -2,6 +2,35 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Control/BrowseProducts.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/DatabaseSim/DBWriter.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/UserInterface/LoginUI.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Users/Customer.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Control/HandlePayment.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Control/UpdateUser.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Control/PurchaseProduct.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Products/Film.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Control/Register.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Products/Game.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/UserInterface/MainMenu.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Control/EndSubscription.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Control/RemoveProduct.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Control/Login.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Users/User.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Control/BuySubscription.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/DatabaseSim/DBReader.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Inventory/Inventory.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Products/Product.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Control/mainControl.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Control/CheckSubscription.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Products/eBook.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Users/Subscription.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Control/CheckBalance.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Control/ChangeSubscription.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/UserInterface/AccountView.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Control/SearchProducts.java</file>
+            <file>file:/C:/Users/danie/Documents/GitHub/Nile-Inc/CS4125Project/src/Users/Admin.java</file>
+        </group>
     </open-files>
 </project-private>
